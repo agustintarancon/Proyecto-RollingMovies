@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ESTILOS NAVBAR */
+.navPropio {
+  background-color: rgba(0, 0, 0, 0.84);
+}
+
+.linkPropio{
+  color: white;
+}
+
+.linkPropio:hover {
+  color: rgb(7, 155, 209);
+}
+
