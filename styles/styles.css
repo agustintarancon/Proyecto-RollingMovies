@@ -4,6 +4,9 @@
   margin: 0;
 }
 
+main {
+  padding-top: 100px;
+}
 /* ESTILOS NAVBAR */
 .navPropio {
   background-color: rgba(0, 0, 0, 0.84);
@@ -15,5 +18,46 @@
 
 .linkPropio:hover {
   color: rgb(7, 155, 209);
+}
+
+/* Estilos carrusel cards */
+
+/* contenedor principal y flechas */
+
+.contCarrusel{
+ display: flex;
+ align-items: center;
+}
+
+.flechaIzquierda, .flechaDerecha {
+  height: 150px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.160);
+  color: white;
+  transition: .7s all;
+}
+
+.flechaIzquierda:hover, .flechaDerecha:hover {
+  background-color: rgba(0, 0, 0, 0.509);
+}
+
+.iconFlecha {
+  font-size: 23px;
+}
+
+/* CARRUSEL */
+
+.carrusel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden; /* Oculta los elementos que salen del contenedor */
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.cardPelicula {
+  margin-right: 20px;
 }
 
