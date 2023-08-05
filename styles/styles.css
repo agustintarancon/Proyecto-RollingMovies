@@ -6,10 +6,12 @@
 
 main {
   padding-top: 100px;
+  background-color: rgb(3, 2, 20);
+  height: 100vh;
 }
 /* ESTILOS NAVBAR */
 .navPropio {
-  background-color: rgba(0, 0, 0, 0.84);
+  background-color: rgb(5, 2, 19);
 }
 
 .linkPropio{
@@ -17,7 +19,7 @@ main {
 }
 
 .linkPropio:hover {
-  color: rgb(7, 155, 209);
+  color: rgb(0, 179, 255);
 }
 
 /* Estilos carrusel cards */
@@ -29,6 +31,10 @@ main {
  align-items: center;
 }
 
+.titulo {
+  font-size: 23px;
+  padding-left: 45px;
+}
 .flechaIzquierda, .flechaDerecha {
   height: 150px;
   width: 50px;
@@ -48,6 +54,12 @@ main {
 }
 
 /* CARRUSEL */
+
+.imgPelicula {
+  width: 250px;
+  height: 150px;
+  border-radius: 8px;
+}
 
 .carrusel {
   width: 100%;
