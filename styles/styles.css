@@ -72,4 +72,60 @@ main {
 .cardPelicula {
   margin-right: 20px;
 }
+ /*PELICULA DE TERROR (FLECHAS)*/
+ 
+ .contenedor-titulo h3{
+  display: flex;
+  justify-content: space-between;
+  color: black; /*luego cambair a blanco cuando el body sea oscuro*/
+  font-size: 30px;
+ }
+ .pelicula-terror {
+  margin-bottom: 70px;
+ }
 
+ .pelicula-terror .contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+ }
+
+ .iconFlecha {
+  font-size: 23px;
+}
+
+.flecha-izquierda, .flecha-derecha {
+  height: 150px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.160);
+  color: white;
+  transition: .7s all;
+ }
+  
+ .flecha-izquierda:hover, .flecha-derecha:hover {
+  background: rgba(0,0,0, .9)
+
+ }
+
+
+ /* CAURUSEL */
+
+.caurosel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden; /* Oculta los elementos que salen del contenedor */
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.pelicula {
+  margin-right: 20px;
+}
+
+.img-peliculas{
+  width: 250px;
+  height: 150px;
+  
+}
