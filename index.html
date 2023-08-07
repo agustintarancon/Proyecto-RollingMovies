@@ -13,9 +13,9 @@
 </head>
 <body>
   
-  <header>
+  <header class="d-flex justify-content-center">
 <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg px-4 position-fixed w-100 navPropio">
+    <nav class="navbar navbar-expand-lg px-4 position-fixed navPropio">
       <div class="container-fluid">
         <a class="navbar-brand text-white" href="#">MoviesCode</a>
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#botonDesplegable" aria-controls="botonDesplegable" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,16 +24,16 @@
         <div class="collapse navbar-collapse" id="botonDesplegable">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link linkPropio mx-1" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link linkPropio px-3 " aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkPropio mx-1" href="#">Contacto</a>
+              <a class="nav-link linkPropio px-3 " href="#">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkPropio mx-1" href="#">Login</a>
+              <a class="nav-link linkPropio px-3 " href="#">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkPropio mx-1" href="#">Registro</a>
+              <a class="nav-link linkPropio px-3 " href="#">Registro</a>
             </li>
           </ul>
         </div>
@@ -46,11 +46,11 @@
   <!-- Carrusel de peliculas -->
     <div class="container-fluid"> 
       <h3 class="text-white titulo">Tendencias</h3>
-      <div class="contCarrusel">
-        <button type="button" class="flechaIzquierda"><i class="bi bi-chevron-left iconFlecha"></i></button>
-          <div class="carrusel">
+      <div class="contCarrusel tendencias">
+        <button  type="button" class="flechaIzquierda"><i class="bi bi-chevron-left iconFlecha"></i></button>
+          <div class="carrusel ">
             <div class="cardPelicula col-9 col-md-4 col-lg-2">
-              <a href="#"><img src="./assets/carruseles/tendencias/escuadronDeLobos.jpg" class="imgPelicula" alt="Película"></a>
+              <a href="./pages/paginaDetalle.html"><img src="./assets/carruseles/tendencias/elPacto.jpg" class="imgPelicula" alt="Película"></a>
             </div>
 
             <div class="cardPelicula col-9 col-md-4 col-lg-2">
@@ -85,9 +85,9 @@
 
     <div class="container-fluid "> 
       <h3 class="text-white titulo">Películas de terror</h3>
-      <div class="contCarrusel">
+      <div class="contCarrusel terror">
         <button type="button" class="flechaIzquierda"><i class="bi bi-chevron-left iconFlecha"></i></button>
-          <div class="carrusel">
+          <div class="carrusel ">
             <div class="cardPelicula col-9 col-md-4 col-lg-2">
               <a href="#"><img src="./assets/carruseles/terror/anabelle3.jpg" class="imgPelicula" alt="Película"></a>
             </div>
@@ -129,31 +129,31 @@
         <button type="button" class="flechaIzquierda"><i class="bi bi-chevron-left iconFlecha"></i></button>
           <div class="carrusel">
             <div class="cardPelicula col-9 col-md-4 col-lg-2">
-              <a href="#"><img src="./assets/carruseles/terror/anabelle3.jpg" class="imgPelicula" alt="Película"></a>
+              <a href="#"><img src="./assets/carruseles/comedia/agenteFortune.jpg" class="imgPelicula" alt="Película"></a>
             </div>
 
             <div class="cardPelicula col-9 col-md-4 col-lg-2">
-              <a href="#"><img src="./assets/carruseles/terror/escapeRoom2.jpg" class="imgPelicula" alt="Película"></a>
+              <a href="#"><img src="./assets/carruseles/comedia/bodasDePlomo.jpg" class="imgPelicula" alt="Película"></a>
             </div>
 
             <div class="cardPelicula col-9 col-md-4 col-lg-2">
-              <a href="#"><img src="./assets/carruseles/terror/it2.jpg" class="imgPelicula" alt="Película"></a>
+              <a href="#"><img src="./assets/carruseles/comedia/dogUnViajeSalvaje.jpg" class="imgPelicula" alt="Película"></a>
             </div>
 
             <div class="cardPelicula col-9 col-md-4 col-lg-2">
-              <a href="#"><img src="./assets/carruseles/terror/laCazadora.jpg" class="imgPelicula" alt="Película"></a>
+              <a href="#"><img src="./assets/carruseles/comedia/hotelTransformania.jpg" class="imgPelicula" alt="Película"></a>
             </div>
 
             <div class="cardPelicula col-9 col-md-4 col-lg-2">
-              <a href="#"><img src="./assets/carruseles/terror/laMonja.jpg" class="imgPelicula" alt="Película"></a>
+              <a href="#"><img src="./assets/carruseles/comedia/lunaDeMielEnFamilia.jpg" class="imgPelicula" alt="Película"></a>
             </div>
 
             <div class="cardPelicula col-9 col-md-4 col-lg-2 ">
-              <a href="#"><img src="./assets/carruseles/terror/noRespires2.jpg" class="imgPelicula" alt="Película"></a>
+              <a href="#"><img src="./assets/carruseles/comedia/mascotas.jpg" class="imgPelicula" alt="Película"></a>
             </div>
 
             <div class="cardPelicula col-9 col-md-4 col-lg-2 ">
-              <a href="#"><img src="./assets/carruseles/terror/terrifier.jpg" class="imgPelicula" alt="Película"></a>
+              <a href="#"><img src="./assets/carruseles/comedia/shrek.jpg" class="imgPelicula" alt="Película"></a>
             </div>
           </div>
         <button type="button" class="flechaDerecha"><i class="bi bi-chevron-right iconFlecha"></i></button>
@@ -169,31 +169,31 @@
     <button type="button" class="flechaIzquierda"><i class="bi bi-chevron-left iconFlecha"></i></button>
       <div class="carrusel">
         <div class="cardPelicula col-9 col-md-4 col-lg-2">
-          <a href="#"><img src="./assets/carruseles/terror/anabelle3.jpg" class="imgPelicula" alt="Película"></a>
+          <a href="#"><img src="./assets/carruseles/series/drHouse.jpg" class="imgPelicula" alt="Película"></a>
         </div>
 
         <div class="cardPelicula col-9 col-md-4 col-lg-2">
-          <a href="#"><img src="./assets/carruseles/terror/escapeRoom2.jpg" class="imgPelicula" alt="Película"></a>
+          <a href="#"><img src="./assets/carruseles/series/elInternado.jpg" class="imgPelicula" alt="Película"></a>
         </div>
 
         <div class="cardPelicula col-9 col-md-4 col-lg-2">
-          <a href="#"><img src="./assets/carruseles/terror/it2.jpg" class="imgPelicula" alt="Película"></a>
+          <a href="#"><img src="./assets/carruseles/series/hannibal.jpg" class="imgPelicula" alt="Película"></a>
         </div>
 
         <div class="cardPelicula col-9 col-md-4 col-lg-2">
-          <a href="#"><img src="./assets/carruseles/terror/laCazadora.jpg" class="imgPelicula" alt="Película"></a>
+          <a href="#"><img src="./assets/carruseles/series/sherlock.jpg" class="imgPelicula" alt="Película"></a>
         </div>
 
         <div class="cardPelicula col-9 col-md-4 col-lg-2">
-          <a href="#"><img src="./assets/carruseles/terror/laMonja.jpg" class="imgPelicula" alt="Película"></a>
+          <a href="#"><img src="./assets/carruseles/series/theExpanse.jpg" class="imgPelicula" alt="Película"></a>
         </div>
 
         <div class="cardPelicula col-9 col-md-4 col-lg-2 ">
-          <a href="#"><img src="./assets/carruseles/terror/noRespires2.jpg" class="imgPelicula" alt="Película"></a>
+          <a href="#"><img src="./assets/carruseles/series/theNightManager.jpg" class="imgPelicula" alt="Película"></a>
         </div>
 
         <div class="cardPelicula col-9 col-md-4 col-lg-2 ">
-          <a href="#"><img src="./assets/carruseles/terror/terrifier.jpg" class="imgPelicula" alt="Película"></a>
+          <a href="#"><img src="./assets/carruseles/series/theWalkingDead.jpg" class="imgPelicula" alt="Película"></a>
         </div>
       </div>
     <button type="button" class="flechaDerecha"><i class="bi bi-chevron-right iconFlecha"></i></button>
