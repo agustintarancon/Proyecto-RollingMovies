@@ -7,6 +7,7 @@
 main {
   padding-top: 60px;
   background-color: rgb(3, 2, 20);
+  height: 120vh;
 }
 /* ESTILOS NAVBAR */
 .navPropio  {
@@ -31,32 +32,9 @@ main {
 
 /* contenedor principal y flechas */
 
-.contCarrusel{
- display: flex;
- align-items: center;
-}
-
-
 .titulo {
   font-size: 23px;
   padding-left: 45px;
-}
-.flechaIzquierda, .flechaDerecha {
-  height: 150px;
-  width: 50px;
-  border: none;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.160);
-  color: white;
-  transition: .7s all;
-}
-
-.flechaIzquierda:hover, .flechaDerecha:hover {
-  background-color: rgba(0, 0, 0, 0.509);
-}
-
-.iconFlecha {
-  font-size: 23px;
 }
 
 /* CARRUSEL */
@@ -66,25 +44,47 @@ main {
   height: 100%;
   border-radius: 8px;
 }
-.contenedorCarrusel{
-  width: 100%;
-  padding: 20px 0;
-  overflow: hidden; /* Todo lo que salga de este contenedor va a desaparecer*/
-  scroll-behavior: smooth; /* controla el comportamiento del scroll*/
+
+.swiper {
+  margin-left: 0px;
+  margin-bottom: 30px;
 }
 
-.carrusel {
-  width: 100%;
-  padding: 20px 0;
-  overflow: hidden; /* Oculta los elementos que salen del contenedor */
-  display: flex;
-  scroll-behavior: smooth;
-  flex-wrap: nowrap;
+.swiper-slide {
+  width: 230px;
+  margin-left: 20px;
 }
 
-.cardPelicula {
-  margin-right: 20px;
+.swiper-button-prev, .swiper-button-next {
+display: none;
 }
 
-/* ////////////////////////////////////////////// */
+@media (min-width: 1000px) {
+  .swiper {
+    margin-left: 30px;
+  }
 
+  .swiper-slide {
+    width: 230px;
+    margin-left: 20px;
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    --swiper-navigation-size:20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.584);
+    height: 101%;
+    width: 40px;
+    margin-top: -65px ;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-radius: 0px 10px 10px 0px;
+    display:flex;
+  }
+
+  .swiper-button-next {
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+
+}
