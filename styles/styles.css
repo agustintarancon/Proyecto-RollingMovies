@@ -11,7 +11,6 @@ main {
 }
 /* ESTILOS NAVBAR */
 .navPropio  {
-  padding: 0px;
   background-color: rgb(5, 2, 19);
   width: 100%;
   z-index: 500;
@@ -21,14 +20,12 @@ main {
   color: white;
   font-size: 1.1rem;
   text-decoration: none;
-  padding: 60px;
-
+  padding: 10px;
 }
 
 .linkPropio:hover {
-  color: rgb(228, 228, 228);
+  color: rgb(19, 155, 247);
 }
-
 
 /* Estilos carrusel cards */
 
