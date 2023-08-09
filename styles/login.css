@@ -29,9 +29,19 @@ input[type="password"]{
   padding: 10px;
   border: none;
 }
+input[type="password"],
+input[type="repeat"]{
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
 .input-contenedor{
   margin-bottom: 15px;
   border: 1px solid #aaa;
+}
+.check{
+  margin-bottom: 10px;
 }
 .icon{
   min-width: 50px;
