@@ -1,0 +1,93 @@
+/* PAGINA DETALLE */
+main {
+  padding-top: 60px;
+  height: 100vh;
+  background-color: rgb(3, 2, 20);
+}
+
+.containerDest {
+  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(2, 0, 14)),url("../assets/paginaDetalle/elPacto.jpeg");;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.containerPropio {
+  padding-top: 230px;
+}
+
+.containerDest h3 {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+
+.containerDest p {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.containerDest a {
+  padding-right: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.containerDest button {
+  color: white;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.598);
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  transition: 0.7s all;
+}
+
+.containerDest button:hover {
+  transform: scale(1.1);
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+
+
+@media (min-width: 390px) {
+  .containerPropio {
+    padding-top: 285px;
+  }
+}
+@media (min-width: 700px) {
+  .containerPropio {
+    padding-top: 400px;
+  }
+}
+@media (min-width: 800px) {
+  .containerPropio {
+    padding-top: 300px;
+  }
+}
+@media (min-width: 850px) {
+  .containerPropio {
+    padding-top: 470px;
+  }
+}
+@media (min-width: 1000px) {
+
+  .containerPropio {
+    padding-top: 0px;
+  }
+
+  .containerDest {
+    height: 90vh;
+  }
+
+  .containerDest h3 {
+    
+    font-size: 3rem;
+  }
+  .containerDest p {
+    font-size: 1.2rem;
+    
+  }
+
+}
