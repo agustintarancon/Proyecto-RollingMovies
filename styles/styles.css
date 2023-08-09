@@ -11,7 +11,7 @@ main {
 }
 /* ESTILOS NAVBAR */
 .navPropio  {
-  padding: 0;
+  padding: 0px;
   background-color: rgb(5, 2, 19);
   width: 100%;
   z-index: 500;
@@ -20,11 +20,13 @@ main {
 .linkPropio{
   color: white;
   font-size: 1.1rem;
+  text-decoration: none;
+  padding: 60px;
+
 }
 
 .linkPropio:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(36, 25, 77);
+  color: rgb(228, 228, 228);
 }
 
 
