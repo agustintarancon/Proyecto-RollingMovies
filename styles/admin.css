@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(3, 2, 20);
+    color: lightblue; /* Cambia el color del texto */
+}
+
+.main {
+    padding-top: 100px;
+}
+
+.table-responsive{
+   height: 90vh;
+}
