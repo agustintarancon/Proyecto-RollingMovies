@@ -4,19 +4,30 @@
   margin: 0;
 }
 
+main {
+  padding-top: 60px;
+  background-color: rgb(3, 2, 20);
+  height: 120vh;
+}
 /* ESTILOS NAVBAR */
-.navPropio {
-  background-color: rgba(0, 0, 0, 0.84);
+.navPropio  {
+  background-color: rgb(5, 2, 19);
+  width: 100%;
+  z-index: 500;
 }
 
 .linkPropio{
   color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 10px;
 }
 
 .linkPropio:hover {
-  color: rgb(7, 155, 209);
+  color: rgb(19, 155, 247);
 }
 
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
 	line-height: 1.5;
@@ -119,3 +130,65 @@ p {
 
 
 
+=======
+/* Estilos carrusel cards */
+
+/* contenedor principal y flechas */
+
+.titulo {
+  font-size: 23px;
+  padding-left: 45px;
+}
+
+/* CARRUSEL */
+
+.imgPelicula {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.swiper {
+  margin-left: 0px;
+  margin-bottom: 30px;
+}
+
+.swiper-slide {
+  width: 230px;
+  margin-left: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+display: none;
+}
+
+@media (min-width: 1000px) {
+  .swiper {
+    margin-left: 30px;
+  }
+
+  .swiper-slide {
+    width: 230px;
+    margin-left: 20px;
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    --swiper-navigation-size:20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.584);
+    height: 101%;
+    width: 40px;
+    margin-top: -65px ;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-radius: 0px 10px 10px 0px;
+    display:flex;
+  }
+
+  .swiper-button-next {
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+
+}
+>>>>>>> main
