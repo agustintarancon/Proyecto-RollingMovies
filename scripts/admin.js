@@ -111,6 +111,7 @@ const obtenerValores = (event) => {
 
 };
 
+
 function actualizarTabla(pelisGuardadas) {
   const tbody = document.getElementById("tbody");
   tbody.innerHTML = ""; // Limpiar la tabla antes de actualizarla
@@ -133,7 +134,7 @@ function actualizarTabla(pelisGuardadas) {
 
     const opciones = document.createElement("td");
     opciones.innerHTML = `
-      <button class="botonEliminar" type="button"><i class="bi bi-trash3"></i></button>
+      <button class="botonEliminar" data-index="${index}" type="button"><i class="bi bi-trash3"></i></button>
       <button type="button"><i class="bi bi-pencil-square"></i></button>
       <button type="button"><i class="bi bi-star"></i></button>
     `;
@@ -147,6 +148,20 @@ function actualizarTabla(pelisGuardadas) {
     tbody.appendChild(tr);
   });
 
+  // Adjuntar oyentes de eventos de clic a los botones "Eliminar"
+  const eliminarButtons = document.querySelectorAll(".botonEliminar");
+  eliminarButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const index = button.getAttribute("data-index");
+      eliminarFila(index);
+    });
+  });
+}
+
+function eliminarFila(index) {
+  pelisGuardadas.splice(index, 1); // Eliminar el elemento en el índice especificado
+  localStorage.setItem("peliculas", JSON.stringify(pelisGuardadas));
+  actualizarTabla(pelisGuardadas);
 }
 
 // Llamada inicial para cargar las películas guardadas al cargar la página
