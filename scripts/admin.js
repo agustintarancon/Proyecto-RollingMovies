@@ -1,7 +1,9 @@
+
 const codigo = document.getElementById("codigo")
 const nombre = document.getElementById("nombre")
 const categoria = document.getElementById("categoria")
 const descripcion = document.getElementById("descripcion")
+const pelisGuardadas = JSON.parse(localStorage.getItem("peliculas")) || [];
 
 // Funcion para guardar valores de los inputs
 const obtenerValores = (event) => {
@@ -77,8 +79,6 @@ const obtenerValores = (event) => {
 
   //guardar en el localStorage los datos
 
-  const pelisGuardadas = JSON.parse(localStorage.getItem("peliculas")) || [];
-
   const codigoExist = pelisGuardadas.find((user) => user.codigo === pelicula.codigo);
   const nombreExist = pelisGuardadas.find((user) => user.nombre === pelicula.nombre);
 
@@ -102,6 +102,8 @@ const obtenerValores = (event) => {
   pelisGuardadas.push(pelicula);
   localStorage.setItem("peliculas", JSON.stringify(pelisGuardadas));
 
+  actualizarTabla(pelisGuardadas);
+
   // Simular un clic en el botón de cierre del modal
   const botonCierreModal = document.getElementById("cerrar");
   botonCierreModal.click();
@@ -109,5 +111,45 @@ const obtenerValores = (event) => {
 
 };
 
+function actualizarTabla(pelisGuardadas) {
+  const tbody = document.getElementById("tbody");
+  tbody.innerHTML = ""; // Limpiar la tabla antes de actualizarla
 
+  pelisGuardadas.forEach((pelicula, index) => {
+    const tr = document.createElement("tr");
+
+    for (const key in pelicula) {
+      if (pelicula.hasOwnProperty(key)) {
+        const valor = pelicula[key];
+
+        const td = document.createElement("td");
+        td.textContent = valor;
+        tr.appendChild(td);
+      }
+    }
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+
+    const opciones = document.createElement("td");
+    opciones.innerHTML = `
+      <button class="botonEliminar" type="button"><i class="bi bi-trash3"></i></button>
+      <button type="button"><i class="bi bi-pencil-square"></i></button>
+      <button type="button"><i class="bi bi-star"></i></button>
+    `;
+
+    const td1 = document.createElement("td");
+    td1.appendChild(checkbox);
+
+    tr.appendChild(td1);
+    tr.appendChild(opciones);
+
+    tbody.appendChild(tr);
+  });
+
+}
+
+// Llamada inicial para cargar las películas guardadas al cargar la página
+
+  actualizarTabla(pelisGuardadas);
 
