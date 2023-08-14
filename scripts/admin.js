@@ -3,6 +3,7 @@ const codigo = document.getElementById("codigo")
 const nombre = document.getElementById("nombre")
 const categoria = document.getElementById("categoria")
 const descripcion = document.getElementById("descripcion")
+const link = document.getElementById("link")
 const pelisGuardadas = JSON.parse(localStorage.getItem("peliculas")) || [];
 
 // Funcion para guardar valores de los inputs
@@ -14,6 +15,7 @@ const obtenerValores = (event) => {
     nombre: nombre.value.toLowerCase(),
     categoria: categoria.value,
     descripcion: descripcion.value.toLowerCase(),
+    link: link.value
   };
 
   //Expresiones regulares
@@ -118,9 +120,9 @@ function actualizarTabla(pelisGuardadas) {
 
   pelisGuardadas.forEach((pelicula, index) => {
     const tr = document.createElement("tr");
-
+    
     for (const key in pelicula) {
-      if (pelicula.hasOwnProperty(key)) {
+      if (pelicula.hasOwnProperty(key) && key !== 'link') {
         const valor = pelicula[key];
 
         const td = document.createElement("td");

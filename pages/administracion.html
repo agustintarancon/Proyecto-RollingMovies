@@ -81,6 +81,7 @@
                         <option value="accion">Accion</option>
                         <option value="terror">Terror</option>
                         <option value="comedia">Comedia</option>
+                        <option value="series">Series</option>
                       </select>
                     </div>          
                     <div id="categoriaNoV"></div>
@@ -90,9 +91,14 @@
                   <textarea name="descripcion" rows="4" cols="50" id="descripcion"></textarea>           
                   <div id="descripcionNoV"></div>
                 </div>
-                <div id="existeCN">
+                <div id="existeCN"></div>
 
-                </div>
+                 <div class="mb-3">
+                  <label for="link" class="form-label text-dark">link</label>
+                  <input type="text" class="form-control" id="link">
+                  <div id="linkNoV"></div>
+                </div>  
+
                 <button type="button" class="btn btn-secondary" id="cerrar" data-bs-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary" id="guardar">Guardar</button>
               </form>
