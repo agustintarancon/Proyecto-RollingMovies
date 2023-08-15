@@ -8,10 +8,9 @@ body {
   background-color: rgb(3, 2, 20);
 }
 
-/* main {
-  padding-top: 100px;
-  padding-bottom: 100px;
-} */
+main {
+  padding-top: 80px;
+}
 
 /* ESTILOS NAVBAR */
 .navPropio  {
@@ -30,6 +29,91 @@ body {
 .linkPropio:hover {
   color: rgb(19, 155, 247);
 }
+
+/*SECCION DESTACADA*/
+
+.banner { 
+  margin-bottom: 60px;
+}
+
+.cardPropia {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.banner .card-content {
+  position: absolute;
+  right: 70px;
+  bottom: 160px;
+  left: 80px;
+}
+
+.banner .card-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.banner-card .card-info div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.banner .card-title {
+  font-size: 2.5em;
+}
+
+@media (max-width: 1077px) {
+  .banner .card-title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 965px) {
+  .banner .card-title {
+    font-size: 1.7em;
+  }
+
+  .banner .card-content {
+    position: absolute;
+    right: 50px;
+    bottom: 70px;
+    left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .card-title {
+    font-size: 1.4em;
+  }
+
+  .banner .card-content {
+    position: absolute;
+    bottom: 70px;
+    left: 45px;
+  }
+}
+
+@media (min-width: 681px) {
+ .bannerM {
+  display: none;
+ }
+}
+
+@media (max-width: 680px) {
+  .banner {
+    display: none;
+  }
+}
+
+
 
 /* CARRUSEL */
 .titulo {
@@ -86,10 +170,11 @@ display: none;
   
 }
 
+
 /* FOOTER */
 
 .footer{
-	background-color: #24262b;
+	background-color: #050f27;
 }
 .footer-col h4{
 	font-size: 18px;
