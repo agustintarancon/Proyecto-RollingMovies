@@ -5,20 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const email = document.querySelector("input[placeholder='Correo Electronico']").value;
-    const password = document.querySelector("input[placeholder='Contraseña']").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-    const storedUserData = localStorage.getItem("userData");
+    const storedUserData = localStorage.getItem("userData") || [];
+
     if (storedUserData) {
       const users = JSON.parse(storedUserData);
-
       const user = users.find(userData => userData.email === email && userData.password === password);
 
       if (user) {
         if (user.esadmin) {
           window.location.href ="administracion.html"; // Redireciona para a página de administração
         } else {
-          alert("Inicio de sesión exitoso");
           window.location.href = "../index.html"; // Redireciona para a página principal
         }
       } else {
