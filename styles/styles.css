@@ -50,17 +50,32 @@ main {
 .banner .card-content {
   position: absolute;
   right: 70px;
-  bottom: 160px;
+  bottom: 150px;
   left: 80px;
 }
 
-.banner .card-info {
+.btnDest {
+  color: white;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.598);
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  transition: 0.7s all;
+}
+.btnDest:hover {
+  transform: scale(1.1);
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.banner .info {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.banner-card .card-info div {
+.banner-card .info div {
   display: flex;
   align-items: center;
   margin-right: 20px;
@@ -72,20 +87,36 @@ main {
 
 @media (max-width: 1077px) {
   .banner .card-title {
-    font-size: 2em;
+    font-size: 1.8em;
+  }
+  .banner .card-content {
+    position: absolute;
+    right: 50px;
+    bottom: 60px;
+    left: 80px;
   }
 }
 
 @media (max-width: 965px) {
   .banner .card-title {
-    font-size: 1.7em;
+    font-size: 1.6em;
   }
 
   .banner .card-content {
     position: absolute;
     right: 50px;
-    bottom: 70px;
+    bottom: 50px;
     left: 80px;
+  }
+
+  .btnDest {
+    color: white;
+    font-size: 19px;
+    background-color: rgba(0, 0, 0, 0.598);
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.7s all;
   }
 }
 
@@ -96,8 +127,17 @@ main {
 
   .banner .card-content {
     position: absolute;
-    bottom: 70px;
+    bottom: 15px;
     left: 45px;
+  }
+  .btnDest {
+    color: white;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.598);
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.7s all;
   }
 }
 
