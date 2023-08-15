@@ -114,6 +114,7 @@ const obtenerValores = (event) => {
 };
 
 
+
 function actualizarTabla(pelisGuardadas) {
   const tbody = document.getElementById("tbody");
   tbody.innerHTML = ""; // Limpiar la tabla antes de actualizarla
@@ -130,10 +131,10 @@ function actualizarTabla(pelisGuardadas) {
         tr.appendChild(td);
       }
     }
-
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-
+    checkbox.checked = true; // Marcar el checkbox
+    
     const opciones = document.createElement("td");
     opciones.innerHTML = `
       <button class="botonEliminar" data-index="${index}" type="button"><i class="bi bi-trash3"></i></button>
@@ -141,12 +142,10 @@ function actualizarTabla(pelisGuardadas) {
       <button type="button"><i class="bi bi-star"></i></button>
     `;
 
-    const td1 = document.createElement("td");
-    td1.appendChild(checkbox);
-
-    tr.appendChild(td1);
+    const td = document.createElement("td");
+    td.appendChild(checkbox);
+    tr.appendChild(td);
     tr.appendChild(opciones);
-
     tbody.appendChild(tr);
   });
 
