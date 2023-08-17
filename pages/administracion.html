@@ -14,8 +14,8 @@
 
 <body>
 
-  <!-- NAVBAR -->
   <header class="d-flex justify-content-center">
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg px-4 position-fixed navPropio">
       <div class="container-fluid">
         <a class="navbar-brand text-white" href="./index.html">MoviesCode</a>
@@ -25,94 +25,153 @@
         <div class="collapse navbar-collapse" id="botonDesplegable">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="linkPropio px-3 " aria-current="page" href="./index.html">Inicio</a>
+              <a class="linkPropio px-3 " aria-current="page" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="linkPropio px-3 " href="#">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="linkPropio px-3 " href="./pages/login.html">Login</a>
+              <a class="linkPropio px-3 " id="cerrarSes" onclick="cerrarSesion()" href="../pages/login.html">Cerrar sesion</a>
             </li>
+  
             <li class="nav-item">
-              <a class="linkPropio px-3 " href="./pages/registro.html">Registro</a>
+              <a class="linkPropio px-3 " href="../pages/administracion.html" id="admin">Administracion</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
   </header>
     
   <main>
-    <div class="container d-flex justify-content-between pt-5 pb-5">
+     <div class="container d-flex justify-content-between pt-5 pb-5">
         <!-- Button trigger modal -->
         <h2>Lista de Peliculas</h2>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">
           Agregar +
         </button>
-    </div>
+     </div>
     <!-- Modal -->
     <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregarLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5 text-dark" id="modalAgregarLabel">Agregar pelicula/serie</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-dark" id="modalAgregarLabel">Agregar pelicula/serie</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
               
-            <div class="container">
-              <form id="form" onsubmit="obtenerValores(event)" novalidate>
-                <div class="mb-3">
-                  <label for="codigo" class="form-label text-dark">Codigo</label>
-                  <input type="number" class="form-control" id="codigo" >
-                  <div id="codigoNoV"></div>
-                </div>
-                <div class="mb-3">
-                  <label for="nombre" class="form-label text-dark">Nombre</label>
-                  <input type="text" class="form-control" id="nombre">
-                  <div id="nombreNoV"></div>
-                </div>
-                <div class="mb-3">
-                  <label for="categoria" class="form-label text-dark">Categoria</label>
-                  <div class="dropdown">   
-                    <div class="input-group mb-3">
-                      <select class="form-select" id="categoria">
-                        <option selected>Categorias</option>
-                        <option value="accion">Accion</option>
-                        <option value="terror">Terror</option>
-                        <option value="comedia">Comedia</option>
-                        <option value="series">Series</option>
-                      </select>
-                    </div>          
-                    <div id="categoriaNoV"></div>
-                </div>
-                <div class="mb-3">
-                  <label for="Descripcion" class="form-label text-dark">Descripcion</label>
-                  <textarea name="descripcion" rows="4" cols="50" id="descripcion"></textarea>           
-                  <div id="descripcionNoV"></div>
-                </div>
-                <div id="existeCN"></div>
+             <div class="container">
+                <form id="form" onsubmit="obtenerValores(event)" novalidate>
+                  <div class="mb-3">
+                    <label for="codigo" class="form-label text-dark">Codigo</label>
+                    <input type="number" class="form-control" id="codigo" >
+                    <div id="codigoNoV"></div>
+                  </div>
+                  <div id="existeC"></div>
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label text-dark">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                    <div id="nombreNoV"></div>
+                  </div>
+                  <div id="existeN"></div>
+                  <div class="mb-3">
+                    <label for="categoria" class="form-label text-dark">Categoria</label>
+                    <div class="dropdown">   
+                      <div class="input-group mb-3">
+                        <select class="form-select" id="categoria">
+                          <option selected>Categorias</option>
+                          <option value="accion">Accion</option>
+                          <option value="terror">Terror</option>
+                          <option value="comedia">Comedia</option>
+                          <option value="series">Series</option>
+                        </select>
+                      </div>          
+                      <div id="categoriaNoV"></div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Descripcion" class="form-label text-dark">Descripcion</label>
+                    <textarea name="descripcion" rows="4" cols="50" id="descripcion"></textarea>           
+                    <div id="descripcionNoV"></div>
+                  </div>
+                 
 
-                 <div class="mb-3">
-                  <label for="link" class="form-label text-dark">link</label>
-                  <input type="text" class="form-control" id="link">
-                  <div id="linkNoV"></div>
-                </div>  
+                  <div class="mb-3">
+                    <label for="link" class="form-label text-dark">link</label>
+                    <input type="text" class="form-control" id="link">
+                    <div id="linkNoV"></div>
+                  </div>  
 
-                <button type="button" class="btn btn-secondary" id="cerrar" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" id="guardar">Guardar</button>
-              </form>
+                  <button type="button" class="btn btn-secondary" id="cerrar" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary" id="guardar">Guardar</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
     
-    <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
-      <!-- Contenido del modal -->
-    </div>
-    
+
+      <!-- Modal -->
+      <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="modalEditarLabel">Editar</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                
+               <div class="container">
+                  <form id="formE" onsubmit="editarValores(event)" novalidate>
+                    <div class="mb-3">
+                      <label for="codigo" class="form-label text-dark">Codigo</label>
+                      <input type="number" class="form-control" id="codigoE" >
+                      <div id="codigoNoVE"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label text-dark">Nombre</label>
+                      <input type="text" class="form-control" id="nombreE">
+                      <div id="nombreNoVE"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="categoria" class="form-label text-dark">Categoria</label>
+                      <div class="dropdown">   
+                        <div class="input-group mb-3">
+                          <select class="form-select" id="categoriaE">
+                            <option selected>Categorias</option>
+                            <option value="accion">Accion</option>
+                            <option value="terror">Terror</option>
+                            <option value="comedia">Comedia</option>
+                            <option value="series">Series</option>
+                          </select>
+                        </div>          
+                        <div id="categoriaNoVE"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Descripcion" class="form-label text-dark">Descripcion</label>
+                      <textarea name="descripcion" rows="4" cols="50" id="descripcionE"></textarea>           
+                      <div id="descripcionNoVE"></div>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="link" class="form-label text-dark">link</label>
+                      <input type="text" class="form-control" id="linkE">
+                      <div id="linkNoVE"></div>
+                    </div>  
+  
+                    <button type="button" class="btn btn-secondary" id="cerrarE" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="guardarE">Guardar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
      <div class="container">
         <div class="table-responsive" >
         <table id="tabla" class="table table-hover table-dark text-center">

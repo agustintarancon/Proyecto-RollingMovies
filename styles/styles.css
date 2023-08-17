@@ -9,11 +9,14 @@ body {
 }
 
 main {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
 }
 
 /* ESTILOS NAVBAR */
+.admin {
+  display: none;
+}
+
 .navPropio  {
   background-color: rgb(5, 2, 19);
   width: 100%;
@@ -30,6 +33,131 @@ main {
 .linkPropio:hover {
   color: rgb(19, 155, 247);
 }
+
+/*SECCION DESTACADA*/
+
+.banner { 
+  margin-bottom: 60px;
+}
+
+.cardPropia {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.banner .card-content {
+  position: absolute;
+  right: 70px;
+  bottom: 150px;
+  left: 80px;
+}
+
+.btnDest {
+  color: white;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.598);
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  transition: 0.7s all;
+}
+.btnDest:hover {
+  transform: scale(1.1);
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.banner .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.banner-card .info div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.banner .card-title {
+  font-size: 2.5em;
+}
+
+@media (max-width: 1077px) {
+  .banner .card-title {
+    font-size: 1.8em;
+  }
+  .banner .card-content {
+    position: absolute;
+    right: 50px;
+    bottom: 60px;
+    left: 80px;
+  }
+}
+
+@media (max-width: 965px) {
+  .banner .card-title {
+    font-size: 1.6em;
+  }
+
+  .banner .card-content {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    left: 80px;
+  }
+
+  .btnDest {
+    color: white;
+    font-size: 19px;
+    background-color: rgba(0, 0, 0, 0.598);
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.7s all;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .card-title {
+    font-size: 1.4em;
+  }
+
+  .banner .card-content {
+    position: absolute;
+    bottom: 15px;
+    left: 45px;
+  }
+  .btnDest {
+    color: white;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.598);
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.7s all;
+  }
+}
+
+@media (min-width: 681px) {
+ .bannerM {
+  display: none;
+ }
+}
+
+@media (max-width: 680px) {
+  .banner {
+    display: none;
+  }
+}
+
+
 
 /* CARRUSEL */
 .titulo {
@@ -86,10 +214,11 @@ display: none;
   
 }
 
+
 /* FOOTER */
 
 .footer{
-	background-color: #24262b;
+	background-color: #050f27;
 }
 .footer-col h4{
 	font-size: 18px;
