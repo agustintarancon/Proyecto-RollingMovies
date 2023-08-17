@@ -3,47 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styleContacto.css">
+    <meta name="description" content="Pagina de peliculas">
+    <meta name="keywords" content="peliculas, movies, moviescode">
+    <title>Contacto</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="../styles/styleContacto.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <div class="contact_form">
 
-        <div class="formulario">      
-          <h1>Contactános</h1>
-            <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
-              <form action="submeter-formulario.php" method="post">       
+  <header class="d-flex justify-content-center">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg px-4 position-fixed navPropio">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="../index.html">MoviesCode</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#botonDesplegable" aria-controls="botonDesplegable" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="botonDesplegable">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="linkPropio px-3 " aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="linkPropio px-3 " href="../pages/pageContacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-                    <p>
+  <main>
+
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-8 col-lg-5 col-xl-4 contactForm">
+       
+            <div class="formulario pt-4 pb-4 text-light" >      
+              <h1>Contactános</h1>
+                <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+                  <form onclick="validaciones(event)" novalidate>       
+                    <div class="mb-3">
                       <label for="nombre" class="colocar_nombre">Nombre
                         <span class="obligatorio">*</span>
                       </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-                    </p>
+                      <input type="text" class="form-control" name="introducir_nombre" id="nombre"
+                      placeholder="Escribe tu nombre">
+                      <div id="nombreNoV"></div>
+                    </div>
                   
-                    <p>
+                    <div class="mb-3">
                       <label for="email" class="colocar_email">Email
                         <span class="obligatorio">*</span>
                       </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                    </p>  
+                      <input type="email" class="form-control" name="introducir_email" id="email"  placeholder="Escribe tu Email">
+                      <div id="emailNoV"></div>
+                    </div>  
                     
-                    <p>
-                      <label for="mensaje" class="colocar_mensaje">Mensaje
-                        <span class="obligatorio">*</span>
-                      </label>                     
-                                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                                    </p>                    
-                  
-                    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
-    
-                    <p class="aviso">
+                    <div class="mb-3">              
+                        <label for="mensaje" class="form-label text-dark">Mensaje<span class="obligatorio">*</span></label>
+                        <textarea name="descripcion" rows="4" cols="50" id="descripcionE"></textarea>           
+                        <div id="descripcionNoVE"></div>
+                      </div>                   
+                    <button type="submit" id="enviar"><div>Enviar</div></button>
+
+                    <div class="aviso">
                       <span class="obligatorio"> * </span>los campos son obligatorios.
-                    </p>          
-                
-              </form>
+                    </div>            
+                </form>
+              </div>   
+          </div>
         </div>  
-      </div>
-    
+      </div> 
+    </main>
+
+          <!-- FOOTER -->
+    <footer class="footer pt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-5 d-flex flex-column align-items-center footer-col">
+            <h4>Movie code</h4>
+            <ul>
+              <li><a href="../pages/aboutus.html">Sobre nosotros</a></li>
+              <li><a href="../pages/pageContacto.html">contacto</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-12 col-md-5 col-md-5 d-flex flex-column align-items-center footer-col">
+            <h4>redes sociales</h4>
+            <ul>
+              <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i> instagram</a></li>
+              <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i> facebook</a></li>
+              <li><a href="https://www.twitter.com"><i class="bi bi-twitter"></i> twitter</a></li>
+              <li><a href="https://www.whatsapp.com"><i class="bi bi-whatsapp"></i> whatsapp</a></li>
+            </ul>
+          </div>
+          
+        </div>
+        <p class="text-center pt-5 pb-5 m-0 text-white">&copy; 2023 MoviesCode Todos los derechos reservados.</p>
+    </footer>
+      <!-- FIN DE FOOTER -->
+      
+      <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../scripts/contacto.js"></script>
+
 </body>
 </html>
+
+
+
+
+
+
+

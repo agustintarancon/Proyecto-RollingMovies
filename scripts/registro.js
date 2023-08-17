@@ -141,7 +141,7 @@ const ValidarUser =(event) => {
 
   localStorage.setItem("users", JSON.stringify(storedUserData)); 
 
-  window.location.href = "http://127.0.0.1:5501/pages/login.html"
+  window.location.href = "../pages/login.html"
 }  
   
  //cuenta para el admin

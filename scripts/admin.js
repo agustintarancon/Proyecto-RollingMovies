@@ -1,3 +1,4 @@
+//Validacion del usuario como admin
 const autenticUsers = localStorage.getItem("authUser")
 const autenticAdmins =localStorage.getItem("authadmin");
 
@@ -5,7 +6,7 @@ const adminLink = document.getElementById("admin")
 const cerrarSes = document.getElementById("cerrarSes")
 
 if (!autenticAdmins) {
-  window.location.href = "http://127.0.0.1:5501/pages/login.html"
+  window.location.href = "../pages/login.html"
 } 
 
 if (autenticAdmins) {
@@ -18,12 +19,6 @@ const cerrarSesion = () => {
   localStorage.removeItem("authUser");
   localStorage.removeItem("authadmin");
 }
-
-
-
-
-
-
 
 const codigo = document.getElementById("codigo")
 const nombre = document.getElementById("nombre")
@@ -58,6 +53,7 @@ const obtenerValores = (event) => {
   const nombreNoV = document.getElementById("nombreNoV")
   const categoriaNoV = document.getElementById("categoriaNoV")
   const descripcionNoV = document.getElementById("descripcionNoV")
+  const linkNoV = document.getElementById("linkNoV")
   const existeC = document.getElementById("existeC")
   const existeN = document.getElementById("existeN")
 
@@ -124,6 +120,16 @@ const obtenerValores = (event) => {
     descripcionNoV.style.display = "none"
   }
 
+  if (pelicula.link.length < 5) {
+    link.style.border = "2px solid red"
+    linkNoV.innerHTML = "<p class='text-danger'> Ingrese una link valido </p>"
+    linkNoV.style.display = "block"
+    return
+  } else {
+    link.style.border = "2px solid green"
+    linkNoV.style.display = "none"
+  }
+
  //volver al color original de los bordes
   nombre.style.border =  "1px solid rgba(0, 0, 0, 0.594)"
   codigo.style.border =  "1px solid rgba(0, 0, 0, 0.594)"
@@ -184,7 +190,7 @@ function actualizarTabla(pelisGuardadas) {
     tbody.appendChild(tr);
     
   });
-  
+   // Adjuntar oyentes de eventos de clic a los botones "editar"
   const editarButtons = document.querySelectorAll(".botonEditar");
   editarButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -302,14 +308,8 @@ actualizarTabla(pelisGuardadas);
     // Si hay un índice de edición válido, actualiza la película en la lista
     pelisGuardadas[peliculaEditIndex] = peliculaEditada;
 
-    //! cargarValoresEdicion(peliculaEditada, peliculaEditIndex); SE PUEDE SACAR?
-    
     // Guarda la lista actualizada en el localStorage
     localStorage.setItem("peliculas", JSON.stringify(pelisGuardadas));
-    
-    
-    //! Reinicia el índice de edición  SE PUEDE SACAR
-    //! peliculaEditIndex = -1;
     
     // Limpia el formulario
     window.location.reload()
