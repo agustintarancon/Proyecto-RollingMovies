@@ -10,3 +10,7 @@ body {
 #nombre, #codigo, #descripcion, #categoria {
     border: 1px solid rgba(0, 0, 0, 0.594) ;
 }
+
+.favorito-activo {
+    color: #ff9900; /* Cambia este valor al color que desees */
+  }

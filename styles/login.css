@@ -8,6 +8,14 @@ body {
   background-color: rgb(3, 2, 20);
 }
 
+#eyeC {
+  display: none;
+}
+#eyeR {
+  display: none;
+}
+
+
 .formulario{
   background: #fff;
   padding: 20px;

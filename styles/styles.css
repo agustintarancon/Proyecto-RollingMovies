@@ -13,6 +13,10 @@ main {
 }
 
 /* ESTILOS NAVBAR */
+.admin {
+  display: none;
+}
+
 .navPropio  {
   background-color: rgb(5, 2, 19);
   width: 100%;
