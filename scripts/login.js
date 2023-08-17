@@ -1,3 +1,10 @@
+const autenticUsers = localStorage.getItem("authUser")
+const autenticAdmins =localStorage.getItem("authadmin");
+
+if (autenticUsers || autenticAdmins) {
+  window.location.href = "../index.html"
+} 
+
 const emailInput = document.getElementById("email");
 const passwordinput = document.getElementById("password");
 
@@ -60,10 +67,10 @@ const validarSesion =(event) => {
 
   if (admin.email === email && admin.password === password) {
      localStorage.setItem("authadmin", JSON.stringify(admin))
-      window.location.href = "http://127.0.0.1:5501/index.html"
+      window.location.href = "../index.html"
     } else if (autenticUsers) {
       localStorage.setItem("authUser", JSON.stringify(autenticUsers))
-      window.location.href = "http://127.0.0.1:5501/index.html"
+      window.location.href = "../index.html"
     } else {
       noExist.innerHTML = "<p class='text-danger'> Las credenciales no son correctas </p>"
       noExist.style.display = "block"

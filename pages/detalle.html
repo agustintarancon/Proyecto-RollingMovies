@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="Pagina de peliculas">
+  <meta name="keywords" content="peliculas, movies, moviescode">
+  <title>MoviesCode</title>
   <!-- bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <!-- icons bootstrap -->
@@ -28,7 +30,7 @@
               <a class="linkPropio px-3 " aria-current="page" href="./index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="linkPropio px-3 " href="#">Contacto</a>
+              <a class="linkPropio px-3 " href="../pages/pageContacto.html">Contacto</a>
             </li>
             <li class="nav-item">
               <a class="linkPropio px-3 " id="cerrarSes" onclick="cerrarSesion()" href="../pages/login.html">Cerrar sesion</a>
@@ -53,14 +55,14 @@
               <p>La historia sigue a John Kinley, un sargento que se encuentra en su último año de servicio en Afganistán y hace equipo con un intérprete afgano llamado Ahmed, quien arriesga su vida cruzando varios kilómetros para salvar a John.</p>
 
               <ul class="d-flex flex-wrap">
-                <a href="#"><li>Suspenso</li></a>
-                <a href="#"><li>Accion</li></a>
-                <a href="#"><li>Militar</li></a>
-                <a href="#"><li>Guerra</li></a>
+                <li class="text-white px-2 list-unstyled">Suspenso</li>
+                <li class="text-white px-2 list-unstyled">Accion</li>
+                <li class="text-white px-2 list-unstyled">Militar</li>
+                <li class="text-white px-2 list-unstyled">Guerra</li>
               </ul> 
               
               <div >
-                <a href="/index.html" class="boton">
+                <a href="../pages/404.html" class="boton">
                   <button type="button"><i class="bi bi-play-circle-fill"></i> Reproducir</button>
                 </a>
               </div>
@@ -68,6 +70,37 @@
           </div>
         </div>
       </main>
+
+
+      <!-- FOOTER -->
+
+    <footer class="footer pt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-5 d-flex flex-column align-items-center footer-col">
+            <h4>Movie code</h4>
+            <ul>
+              <li><a href="../pages/aboutus.html">Sobre nosotros</a></li>
+              <li><a href="../pages/pageContacto.html">contacto</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-12 col-md-5 col-md-5 d-flex flex-column align-items-center footer-col">
+            <h4>redes sociales</h4>
+            <ul>
+              <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i> instagram</a></li>
+              <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i> facebook</a></li>
+              <li><a href="https://www.twitter.com"><i class="bi bi-twitter"></i> twitter</a></li>
+              <li><a href="https://www.whatsapp.com"><i class="bi bi-whatsapp"></i> whatsapp</a></li>
+            </ul>
+          </div>
+          
+        </div>
+        <p class="text-center pt-5 pb-5 m-0 text-white">&copy; 2023 MoviesCode Todos los derechos reservados.</p>
+    </footer>
+      
+      <!-- FIN DE FOOTER -->
+
 
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

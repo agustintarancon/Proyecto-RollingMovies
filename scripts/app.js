@@ -5,7 +5,7 @@ const adminLink = document.getElementById("admin")
 const cerrarSes = document.getElementById("cerrarSes")
 
 if (!autenticUsers && !autenticAdmins) {
-  window.location.href = "http://127.0.0.1:5501/pages/login.html"
+  window.location.href = "../pages/login.html"
 } 
 
 if (autenticAdmins) {
@@ -47,9 +47,9 @@ const pelisGuardadas = JSON.parse(localStorage.getItem("peliculas")) || [];
           const enlaceElement = document.createElement("a");
 
           if (pelicula.nombre === "el pacto") {
-            enlaceElement.href = "../pages/detalle.html"; // Reemplaza esto con la URL del enlace
+            enlaceElement.href = "../pages/detalle.html"; // URL del enlace
           } else {
-            enlaceElement.href = "#"; // Reemplaza esto con la URL del enlace
+            enlaceElement.href = "../pages/404.html"; //URL del enlace
           }
           enlaceElement.appendChild(imagenElement); // Agregar la imagen al enlace
 
