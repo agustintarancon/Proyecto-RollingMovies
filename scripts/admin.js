@@ -135,6 +135,7 @@ const obtenerValores = (event) => {
   codigo.style.border =  "1px solid rgba(0, 0, 0, 0.594)"
   descripcion.style.border =  "1px solid rgba(0, 0, 0, 0.594)"
   categoria.style.border =  "1px solid rgba(0, 0, 0, 0.594)"
+  link.style.border =  "1px solid rgba(0, 0, 0, 0.594)"
 
 
   pelisGuardadas.push(pelicula);

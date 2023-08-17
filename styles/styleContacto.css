@@ -22,22 +22,21 @@ body{
   margin-bottom: 1px; 
 }
 
-
 textarea{
   background-color: #565656c5; 
   border-radius: 5px;  
   border-style: solid; 
   border-width: 1px; 
   border-color:  #484749; 
-  margin-top: 10px;  
-  padding-left: 10px;
-  margin-bottom: 20px; 
-  padding-top: 15px; 
+
 }
+
 .texto_mensaje {
-  width: 100%; /* Asegura que el textarea ocupe todo el ancho disponible */
-  max-width: 100%; /* Limita el ancho máximo a la pantalla */
-  resize: vertical; /* Permite redimensionar verticalmente el textarea */
+  width: 100%; 
+  max-width: 100%; 
+  resize: vertical;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 label{
