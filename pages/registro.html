@@ -11,7 +11,6 @@
 <!-- CSS -->
 <link rel="stylesheet" href="../styles/login.css">
 <link rel="stylesheet" href="../styles/styles.css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -19,15 +18,13 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg px-4 position-fixed navPropio">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="./index.html">MoviesCode</a>
+        <p class="navbar-brand text-white">MoviesCode</p>
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#botonDesplegable" aria-controls="botonDesplegable" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="botonDesplegable">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="linkPropio px-3 " aria-current="page" href="../index.html">Inicio</a>
-            </li>
+     
             <li class="nav-item">
               <a class="linkPropio px-3 " href="#">Contacto</a>
             </li>
@@ -43,7 +40,7 @@
     </nav>
     
   </header>
-  
+
   <div class="container-fluid">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-8 col-lg-5 col-xl-4">
@@ -52,36 +49,45 @@
                 <div class="row">
                   
                   <div class="input-contenedor mb-3">
-                    <i class="fas fa-user icon"></i>
+                    
                     <input type="text" class="form-control" placeholder="Nombre/es " id="nombre">
                     <div id="nombreNoV"></div>
                   </div>
 
                   <div class="input-contenedor mb-3">
-                    <i class="fas fa-user icon"></i>
+                    
                     <input type="text" class="form-control" placeholder="Apellido" id="apellido">
                     <div id="apellidoNoV"></div>
                   </div>
 
 
                   <div class="input-contenedor mb-3">
-                    <i class="fas fa-envelope icon"></i>
+                    
                     <input type="email" class="form-control" placeholder="Correo Electronico" id="email">
                     <div id="emailNoV"></div>
                   </div>
 
-                  <div class="input-contenedor mb-3">
-                    <i class="fas fa-key icon"></i>
-                    <input type="password" class="form-control" placeholder="Contraseña" id="password">
+           
+                    
+                  <div class="input-group mb-3">
+                    <input type="password" id="password" class="form-control" placeholder="Contraseña">
+                    <div class="input-group-text" id="button1C">
+                      <i class="bi bi-eye" id="eyeC"></i>
+                      <i class="bi bi-eye-slash" id="closeEyeC"></i>
+                    </div>
                     <div id="passwordNoV"></div>
                   </div>
-
-                  <div class="input-contenedor mb-3">
-                    <i class="fas fa-key icon"></i>
-                    <input type="password" class="form-control" placeholder="Repite la Contraseña"  id="repeatPassword">
+                  
+                  <div class="input-group mb-3">
+                    <input type="password" id="repeatPassword" class="form-control" placeholder="Repite la Contraseña">
+                    <div class="input-group-text" id="button2C">
+                      <i class="bi bi-eye" id="eyeR"></i>
+                      <i class="bi bi-eye-slash" id="closeEyeR"></i>
+                    </div>
                     <div id="repeatPassNoV"></div>
                   </div>
-
+                  
+  
                   <div class="check mb-3">
                     <input type="checkbox" class="form-check-input" id="checkbox">
                     <label class="form-check-label" for="checkbox">Acepto los terminos y condiciones</label>

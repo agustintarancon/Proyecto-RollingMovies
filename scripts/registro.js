@@ -1,12 +1,44 @@
+
+//Capturar valores de los input
 const nombre = document.getElementById("nombre")
 const apellido = document.getElementById("apellido")
 const email = document.getElementById("email")
 const password = document.getElementById("password")
-
 const repeatPassword = document.getElementById("repeatPassword")
 const conditions = document.getElementById("checkbox");
 
+//Botones mostrar contraseña
+const button1C = document.getElementById("button1C");
+const button2C = document.getElementById("button2C");
+//Eventos mostrar contraseñas
+button1C.addEventListener("click", () => {
+  const openEye = document.getElementById("eyeC");
+  const closeEye = document.getElementById("closeEyeC");
+  if (password.type === "password") {
+    password.type = "text";
+    closeEye.style.display = "none";
+    openEye.style.display = "block";
+  } else {
+    password.type = "password";
+    closeEye.style.display = "block";
+    openEye.style.display = "none";
+  };
+})
+button2C.addEventListener("click", () => {
+  const openEyeR = document.getElementById("eyeR");
+  const closeEyeR = document.getElementById("closeEyeR");
+  if (repeatPassword.type === "password") {
+    repeatPassword.type = "text";
+    closeEyeR.style.display = "none";
+    openEyeR.style.display = "block";
+  } else {
+    repeatPassword.type = "password";
+    closeEyeR.style.display = "block";
+    openEyeR.style.display = "none";
+  };  
+})
 
+//Validar inputs
 const ValidarUser =(event) => {
   event.preventDefault();
 
@@ -15,10 +47,10 @@ const ValidarUser =(event) => {
     apellido: apellido.value,
     email: email.value,
     password:password.value,
-    // admin: userType === 'admin', 
+    admin: "false"
   };
 
-
+  const nombreRegex = /^[a-zA-ZáÁéÉíÍóÓúÚñÑ\s'\-]{3,20}$/
   const PasswordRegex = /^(?=.*[A-Z])(?=.*[0-9]).{6,}$/;
   const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -33,9 +65,9 @@ const ValidarUser =(event) => {
     
   //validaciones 
 
-  if (userData.nombre.length < 3) {
+  if (!nombreRegex.test(userData.nombre)) {
     nombre.style.border = "2px solid red"
-    nombreNoV.innerHTML = "<p class='text-danger'> Ingrese un nombre de almenos 3 caracteres </p>"
+    nombreNoV.innerHTML = "<p class='text-danger'> Ingrese un nombre de almenos 3 caracteres, solo letras </p>"
     nombreNoV.style.display = "block"
     return
   } else {
@@ -43,9 +75,9 @@ const ValidarUser =(event) => {
     nombreNoV.style.display = "none"
   }
 
-  if (userData.apellido.length < 3) {
+  if (!nombreRegex.test(userData.apellido)) {
     apellido.style.border = "2px solid red"
-    apellidoNoV.innerHTML = "<p class='text-danger'> Ingrese un numero por favor. </p>"
+    apellidoNoV.innerHTML = "<p class='text-danger'> Ingrese un apellido de almenos 3 caracteres, solo letras </p>"
     apellidoNoV.style.display = "block"
     return
   } else {
@@ -112,21 +144,11 @@ const ValidarUser =(event) => {
   window.location.href = "http://127.0.0.1:5501/pages/login.html"
 }  
   
-  //   const userType = document.querySelector("input[name='userType']:checked").value; admin ono
+ //cuenta para el admin
+    const admin = {
+      email: "admin@gmail.com",
+      password:"Admin123",
+      admin: "true"
+    };
 
-    // if (userType === 'admin') {
-    //     // 4) Salvar o email em um arquivo TXT ou Outlook
-    //     saveEmailToFile(email);
-
-    //     // 5) Enviar um email de boas vindas para o email do usuário
-    //     sendWelcomeEmail(email);
-    //   }
-    // // 5) Função para salvar o email em um arquivo TXT ou Outlook
-    // function saveEmailToFile(email) {
-    //     // Implemente a lógica para salvar o email em um arquivo
-    //   }
-      
-    //   // 5) Função para enviar um email de boas vindas ao setor de administração
-    //   function sendWelcomeEmail(email) {
-    //       // Implemente a lógica para enviar o email de boas vindas
-    //   }
+    localStorage.setItem("admin", JSON.stringify(admin)); 
