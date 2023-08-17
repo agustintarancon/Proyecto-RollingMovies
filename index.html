@@ -8,248 +8,169 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <!-- icons bootstrap -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+<!-- swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 <!-- CSS -->
 <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body>
+  <body>
   
-  <header class="d-flex justify-content-center">
-<!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg px-4 position-fixed navPropio">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">MoviesCode</a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#botonDesplegable" aria-controls="botonDesplegable" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="botonDesplegable">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link linkPropio px-3 " aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link linkPropio px-3 " href="#">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link linkPropio px-3 " href="./login/login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link linkPropio px-3 " href="./login/registro.html">Registro</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-  </header>
-
-  <main>
-
-
-  <!-- Carrusel de peliculas -->
-    <!-- Slider main container -->
- <h3 class="text-white titulo">Tendencias</h3>
- 
- <div class="swiper">
-   <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">
-        <a href="./pages/paginaDetalle.html"><img src="./assets/carruseles/tendencias/elPacto.jpg" class="imgPelicula" alt="Película El pacto"></a>
-    </div>
-
-    <div class="swiper-slide">
-        <a href="#"><img src="./assets/carruseles/tendencias/asesinoSinMemoria.jpg" class="imgPelicula" alt="Película Asesino sin memoria"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/tendencias/wolfPack.jpg" class="imgPelicula" alt="Película Wolfpack"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/tendencias/elMuroTheWall.jpg" class="imgPelicula" alt="Película El Muro The Wall"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/tendencias/vistoPorUltimaVez.jpg" class="imgPelicula" alt="Película Visto Por ultima vez"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/tendencias/laInvasion.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/tendencias/escuadronDeLobos.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-  </div>
-  
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-</div>
-  
-
-
+    <header class="d-flex justify-content-center">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg px-4 position-fixed navPropio">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="./index.html">MoviesCode</a>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#botonDesplegable" aria-controls="botonDesplegable" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="botonDesplegable">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="linkPropio px-3 " aria-current="page" href="./index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="linkPropio px-3 " href="#">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="linkPropio px-3 " id="cerrarSes" onclick="cerrarSesion()" href="./pages/login.html">Cerrar sesion</a>
+              </li>
     
-<!-- CARRUSEL TERROR -->
-<!-- Slider main container -->
-<h3 class="text-white titulo">Comedia</h3>
- 
-<div class="swiper">
-  <!-- Additional required wrapper -->
- <div class="swiper-wrapper">
-   <!-- Slides -->
-   <div class="swiper-slide">
-       <a href="#"><img src="./assets/carruseles/comedia/agenteFortune.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
+              <li class="nav-item">
+                <a class="linkPropio px-3 " href="./pages/administracion.html" id="admin">Administracion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-   <div class="swiper-slide">
-       <a href="#"><img src="./assets/carruseles/comedia/bodasDePlomo.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
+    </header>
 
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/comedia/dogUnViajeSalvaje.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
+    <main>
+      <!-- section destacada -->
+      <section class="container-fluid banner">
+        <a href="./pages/detalle.html" class="text-decoration-none">
+          <div class="cardPropia">
+            <img src="assets/paginaDetalle/elPactoBannerPC.jpg" class="banner-img">
+            <div class="card-content">
+              <h2 class="card-title text-white pb-3">Guy Ritchie: The Covenant</h2>
+              <div class="categories">
+                <ul class="d-flex flex-wrap list-unstyled">
+                  <span class="bi bi-film text-white"></span>
+                  <li class="mx-2 text-white">Suspenso</li>
+                  <li class="mx-2 text-white">Accion</li>
+                  <li class="mx-2 text-white">Militar</li>
+                  <li class="mx-2 text-white">Guerra</li>
+                </ul> 
+              </div>
+              <div class="info text-white">
+                <div class="info-item ">
+                  <span class="bi bi-calendar"></span>
+                  <span>2023</span>
+                </div>
+                <div class="info-item mx-2">
+                  <span class="bi bi-clock"></span>
+                  <span>2h 3m</span>
+                </div>
+              </div>
+                <button type="button" class="btnDest"><i class="bi bi-play-circle-fill"></i> Reproducir</button>
+            </div>
+          </div>
+        </a>
+    </section>
 
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/comedia/hotelTransformania.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
+      <!-- secition mobile -->
+      <section class="container-fluid bannerM">
+        <a href="./pages/detalle.html">
+          <div class="cardPropia">
+            <img src="assets/paginaDetalle/elPactoBanner.jpeg" class="banner-img">
+          </div>
+        </a>
+      </section>
 
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/comedia/lunaDeMielEnFamilia.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
+      <!-- Carrusel de peliculas -->
+        <!-- Slider main container -->
+      <h3 class="text-white titulo">Tendencias</h3>
+      <div class="swiper">
+        <div class="swiper-wrapper" id="carruselTendencias">
+          <!-- Slides -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+        
+      <!-- CARRUSEL COMEDIA -->
+      <!-- Slider main container -->
+      <h3 class="text-white titulo">Comedia</h3>
+      <div class="swiper">
+      <div class="swiper-wrapper" id="carruselComedia">
+        <!-- Slides -->
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      </div>
 
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/comedia/mascotas.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
+          <!-- CARRUSEL series-->
+        <!-- Slider main container -->
+      <h3 class="text-white titulo">Series para maratonear</h3>
+      <div class="swiper">
+        <div class="swiper-wrapper" id="carruselSeries">
+          <!-- Slides -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+        
+      <!-- CARRUSEL TERROR -->
 
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/comedia/shrek.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
- </div>
- 
- <div class="swiper-button-prev"></div>
- <div class="swiper-button-next"></div>
-
-</div>
- 
-
-
-
-
-    <!-- CARRUSEL Comedia-->
-
-   <!-- Slider main container -->
- <h3 class="text-white titulo">Series para maratonear</h3>
- 
- <div class="swiper">
-   <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">
-        <a href="#"><img src="./assets/carruseles/series/drHouse.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-    <div class="swiper-slide">
-        <a href="#"><img src="./assets/carruseles/series/elInternado.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/series/hannibal.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/series/sherlock.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/series/theExpanse.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/series/theNightManager.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-    <div class="swiper-slide">
-      <a href="#"><img src="./assets/carruseles/series/theWalkingDead.jpg" class="imgPelicula" alt="Película"></a>
-    </div>
-
-  </div>
+      <!-- Slider main container -->
+      <h3 class="text-white titulo">Terror</h3>
+      <div class="swiper" id="carruselTerror">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
   
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+    </main>
 
-</div>
-  
+    <!-- FOOTER -->
 
+    <footer class="footer pt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-5 d-flex flex-column align-items-center footer-col">
+            <h4>Movie code</h4>
+            <ul>
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">contacto</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-12 col-md-5 col-md-5 d-flex flex-column align-items-center footer-col">
+            <h4>redes sociales</h4>
+            <ul>
+              <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i> instagram</a></li>
+              <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i> facebook</a></li>
+              <li><a href="https://www.twitter.com"><i class="bi bi-twitter"></i> twitter</a></li>
+              <li><a href="https://www.whatsapp.com"><i class="bi bi-whatsapp"></i> whatsapp</a></li>
+            </ul>
+          </div>
+          
+        </div>
+        <p class="text-center pt-5 pb-5 m-0 text-white">&copy; 2023 MoviesCode Todos los derechos reservados.</p>
+    </footer>
+      
+      <!-- FIN DE FOOTER -->
+      
+      <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- swiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- JS -->
+    <script src="./scripts/app.js"></script>
 
-
-
-<!-- CARRUSEL Series para maratonear -->
-
-<!-- Slider main container -->
-<h3 class="text-white titulo">Terror</h3>
- 
-<div class="swiper">
-  <!-- Additional required wrapper -->
- <div class="swiper-wrapper">
-   <!-- Slides -->
-   <div class="swiper-slide">
-       <a href="#"><img src="./assets/carruseles/terror/anabelle3.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
-
-   <div class="swiper-slide">
-       <a href="#"><img src="./assets/carruseles/terror/escapeRoom2.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
-
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/terror/it2.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
-
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/terror/laCazadora.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
-
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/terror/laMonja.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
-
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/terror/noRespires2.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
-
-   <div class="swiper-slide">
-     <a href="#"><img src="./assets/carruseles/terror/terrifier.jpg" class="imgPelicula" alt="Película"></a>
-   </div>
-   ...
- </div>
- 
- <div class="swiper-button-prev"></div>
- <div class="swiper-button-next"></div>
-
-</div>
- 
-
-
-
-
-
-
-  </main>
-
-  <footer></footer>
-
-<!-- bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<!-- JS -->
-<script src="./scripts/app.js"></script>
-
-</body>
+  </body>
 </html>
+
+

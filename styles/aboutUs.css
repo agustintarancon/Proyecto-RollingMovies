@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(3, 2, 20);
+    color: white;
+}
+.hr-2{
+    width: 60px;
+  }
+  
+  .hrCenter{
+    margin: auto;
+  }
+  
+  #about{
+    background-color: var(--color-gris);  
+  }
+  .aboutBackground{
+  height: 350px;
+  }
+  .aboutBackgroundImg{
+    background-image: url(../assets/aboutUs/slide-about.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .card-2{
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .img-2 img{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4.7px solid #fff;
+    transition: .7s;
+  }
+  .card-2:hover .img-2 img{
+    border-color: rgb(5, 2, 19);
+    transition: .7s;
+  }
+  .mainText{
+    padding: 15px 0;
+  }
+  .mainText h2{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0 0 20px;
+  }
+  .socials i {
+    font-size: 20px;
+    color: var(--color-naranja);
+    padding: 0 10px;
+  }
+  

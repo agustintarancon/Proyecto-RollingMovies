@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(3, 2, 20);
+    color: lightblue; /* Cambia el color del texto */
+}
+
+.main {
+    padding-top: 100px;
+}
+
+#nombre, #codigo, #descripcion, #categoria {
+    border: 1px solid rgba(0, 0, 0, 0.594) ;
+}
+
+.favorito-activo {
+    color: #ff9900; /* Cambia este valor al color que desees */
+  }

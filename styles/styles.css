@@ -4,14 +4,20 @@
   margin: 0;
 }
 
-main {
-  padding-top: 60px;
+body {
   background-color: rgb(3, 2, 20);
-  height: 120vh;
 }
+
+main {
+  padding-top: 80px;
+}
+
 /* ESTILOS NAVBAR */
+.admin {
+  display: none;
+}
+
 .navPropio  {
-  padding: 0;
   background-color: rgb(5, 2, 19);
   width: 100%;
   z-index: 500;
@@ -20,24 +26,144 @@ main {
 .linkPropio{
   color: white;
   font-size: 1.1rem;
+  text-decoration: none;
+  padding: 10px;
 }
 
 .linkPropio:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(36, 25, 77);
+  color: rgb(19, 155, 247);
+}
+
+/*SECCION DESTACADA*/
+
+.banner { 
+  margin-bottom: 60px;
+}
+
+.cardPropia {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.banner .card-content {
+  position: absolute;
+  right: 70px;
+  bottom: 150px;
+  left: 80px;
+}
+
+.btnDest {
+  color: white;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.598);
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  transition: 0.7s all;
+}
+.btnDest:hover {
+  transform: scale(1.1);
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.banner .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.banner-card .info div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.banner .card-title {
+  font-size: 2.5em;
+}
+
+@media (max-width: 1077px) {
+  .banner .card-title {
+    font-size: 1.8em;
+  }
+  .banner .card-content {
+    position: absolute;
+    right: 50px;
+    bottom: 60px;
+    left: 80px;
+  }
+}
+
+@media (max-width: 965px) {
+  .banner .card-title {
+    font-size: 1.6em;
+  }
+
+  .banner .card-content {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    left: 80px;
+  }
+
+  .btnDest {
+    color: white;
+    font-size: 19px;
+    background-color: rgba(0, 0, 0, 0.598);
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.7s all;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .card-title {
+    font-size: 1.4em;
+  }
+
+  .banner .card-content {
+    position: absolute;
+    bottom: 15px;
+    left: 45px;
+  }
+  .btnDest {
+    color: white;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.598);
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.7s all;
+  }
+}
+
+@media (min-width: 681px) {
+ .bannerM {
+  display: none;
+ }
+}
+
+@media (max-width: 680px) {
+  .banner {
+    display: none;
+  }
 }
 
 
-/* Estilos carrusel cards */
 
-/* contenedor principal y flechas */
-
+/* CARRUSEL */
 .titulo {
   font-size: 23px;
   padding-left: 45px;
 }
-
-/* CARRUSEL */
 
 .imgPelicula {
   width: 100%;
@@ -86,5 +212,62 @@ display: none;
     border-radius: 10px 0px 0px 10px;
   }
   
+}
 
+
+/* FOOTER */
+
+.footer{
+	background-color: #050f27;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
 }
